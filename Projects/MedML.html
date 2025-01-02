@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* Ensure consistent font */
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+    
+            .box {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            header h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #2d2d2d;
+            }
+    
+            header p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+    
+            section header h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+    
+            section p {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+    
+            /* Links and buttons */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 5px;
+                background: #007BFF;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+    
+            .button:hover {
+                background: #0056b3;
+            }
+    
+            .button.alt {
+                background: #28a745;
+            }
+    
+            .button.alt:hover {
+                background: #218838;
+            }
+
+            .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+    
+            /* Responsive Design */
+            @media screen and (max-width: 768px) {
+                .box {
+                    padding: 15px;
+                    margin: 20px;
+                }
+    
+                header h2 {
+                    font-size: 1.8rem;
+                }
+    
+                section header h1 {
+                    font-size: 1.4rem;
+                }
+    
+                section p {
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+	</head>
+	<body>
+        <article class="box">
+            <header>
+                <h2>MeDML</h2>
+                <p>Med-Dynamic Meta Learning - A multi-layered representation to identify provider fraud in healthcare</p>
+            </header>
+            <section>
+                <header>
+                    <h1>Abstract</h1>
+                </header>
+                <p>
+                    Every year, health insurance fraud costs taxpayers billions of dollars and puts patient’s health and welfare at
+                     risk. Existing solutions to detect fraudulent providers (hospitals, physicians, etc.) aim to find unusual pattern
+                      at claim level features but fail to harness provider-provider and provider-patient interaction information.
+                      We propose a novel framework, Med-Dynamic meta learning (MeDML), that extends the capability of traditional fraud
+                       detection by learning patterns from 1) patient-provider interaction using temporal and geo-spatial characteristics 2) 
+                       provider's treatment using encounter data (e.g. medical codes, mix of attended patients) and 3) referral using underlying 
+                       provider-provider relationships based on common patient visits within 30 days. To the best of our knowledge, MeDML is first framework that 
+                       can model fraud using multi-aspect representation of provider. MeDML also encapsulates provider's phantom billing index, which identifies excessive 
+                       and unnecessary services provided to patients, by segmenting frequently co-occurring diagnosis and procedures in non-fraudulent provider's claims. 
+                       It uses a novel framework to aggregate the learned representations capturing their task-specific relative importance via attention mechanism. 
+                       We test the dynamically generated meta embedding using various downstream models and show that it outperforms all baseline algorithms for provider fraud 
+                       prediction task.
+                </p>
+                <header>
+                    <h1>Images</h1>
+                </header>
+                <section>
+                <a class="image featured"><img src="../assets/img/medml_arch.png" alt="" /></a>
+                <p style = "text-align:center;"><b><u>
+                    An overview of the complete approach of training a predictive model for provider fraud classification</b></u>
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h1>Links</h1>
+                </header>
+                <p>
+                    <a href = "https://journals.flvc.org/FLAIRS/article/view/128525" target="_blank" class="button alt">Paper</a>
+                </p>
+            </section>
+        </article>
+
+	</body>
+</html>

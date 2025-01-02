@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* Ensure consistent font */
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+    
+            .box {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            header h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #2d2d2d;
+            }
+    
+            header p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+    
+            section header h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+    
+            section p {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+    
+            /* Links and buttons */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 5px;
+                background: #007BFF;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+    
+            .button:hover {
+                background: #0056b3;
+            }
+    
+            .button.alt {
+                background: #28a745;
+            }
+    
+            .button.alt:hover {
+                background: #218838;
+            }
+
+            .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+    
+            /* Responsive Design */
+            @media screen and (max-width: 768px) {
+                .box {
+                    padding: 15px;
+                    margin: 20px;
+                }
+    
+                header h2 {
+                    font-size: 1.8rem;
+                }
+    
+                section header h1 {
+                    font-size: 1.4rem;
+                }
+    
+                section p {
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+	</head>
+	<body>
+        <article class="box">
+            <header>
+                <h2>Information Retrieval (Passage Ranking) using NLP</h2>
+                <p>Microsoft India AI Challenge 2018</p>
+            </header>
+            <section>
+                <header>
+                    <h1>Abstract</h1>
+                </header>
+                <p>
+                    This is a solution to Microsoft's AI Challenge 2018, 
+                    focusing on passage retrieval from a given dataset using machine learning models. 
+                    Given a user query and candidate passages corresponding to each, the task is to mark the most 
+                    relevant passage which contains the answer to the user query. While 
+                    the competition is no longer active for submissions, the solution remains accessible for 
+                    educational purposes. The implementation comprises two main approaches: BM25 and Deep Learning (DL). 
+                    The BM25 method, a well-known probabilistic technique for passage retrieval, is implemented 
+                    with minor optimizations. Additionally, various deep learning models are explored for passage 
+                    retrieval tasks, including Convolutional Neural Networks (CNN), Long Short-Term Memory (LSTM), 
+                    and attention mechanisms with LSTM. Notably, a Bi-directional Attention Flow (BIDAF) model is 
+                    adopted in this solution. Implementation details include hardware specifications, with training 
+                    performed on an 8 GB GeForce 960M GPU and 8 GB RAM. Given resource constraints, better GPU resources 
+                    are recommended for improved efficiency. TensorFlow libraries are utilized and the users are directed to 
+                    the code for specific dependencies. Data acquisition is expected from the competition's link, and GloVe 
+                    word embeddings are required, with instructions for obtaining 100-dimensional embeddings provided. 
+                    The solution offers valuable insights into both traditional probabilistic methods and state-of-the-art deep 
+                    learning approaches for passage retrieval, serving as a practical resource for understanding machine 
+                    learning principles in real-world scenarios.
+                </p>
+                
+            </section>
+            <section>
+                <header>
+                    <h1>Links</h1>
+                </header>
+                <p>
+                    <a href = "https://github.com/Deepak-Work/Passage_Retrieval" class ="button alt" target="_blank">Code</a>
+                    <a href = "https://competitions.codalab.org/competitions/20616" class ="button alt" target="_blank">Competition Link (Now Inactive)</a>
+
+                </p>
+            </section>
+        </article>
+
+	</body>
+</html>

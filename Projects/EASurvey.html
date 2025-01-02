@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* Ensure consistent font */
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+    
+            .box {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            header h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #2d2d2d;
+            }
+    
+            header p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+    
+            section header h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+    
+            section p {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+    
+            /* Links and buttons */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 5px;
+                background: #007BFF;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+    
+            .button:hover {
+                background: #0056b3;
+            }
+    
+            .button.alt {
+                background: #28a745;
+            }
+    
+            .button.alt:hover {
+                background: #218838;
+            }
+
+            .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+    
+            /* Responsive Design */
+            @media screen and (max-width: 768px) {
+                .box {
+                    padding: 15px;
+                    margin: 20px;
+                }
+    
+                header h2 {
+                    font-size: 1.8rem;
+                }
+    
+                section header h1 {
+                    font-size: 1.4rem;
+                }
+    
+                section p {
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+	</head>
+	<body>
+        <article class="box">
+            <header>
+                <h2>Entity Alignment Survey</h2>
+                <p>Entity alignment for knowledge graphs: progress, challenges, and empirical studies</p>
+            </header>
+            <section>
+                <header>
+                    <h1>Abstract</h1>
+                </header>
+                <p>
+                    Entity Alignment (EA) identifies entities across databases that refer to the same entity. 
+                    Knowledge graph-based embedding methods have recently dominated EA techniques. Such methods
+                     map entities to a low-dimension space and align them based on their similarities. With the
+                      corpus of EA methodologies growing rapidly, this paper presents a comprehensive analysis
+                    of various existing EA methods, elaborating their applications and limitations. Further,
+                    we distinguish the methods based on their underlying algorithms and the information they
+                        incorporate to learn entity representations. Based on challenges in industrial datasets,
+                        we bring forward  research questions (RQs). These RQs empirically analyse the algorithms
+                     from the perspective of Hubness, Degree distribution, Non-isomorphic neighbourhood, and Name bias. 
+                     For Hubness, where one entity turns up as the nearest neighbour of many other entities, we define 
+                     an -score to quantify its effect on the performance of various algorithms. Additionally, we try 
+                     to level the playing field for algorithms that rely primarily on name-bias existing in the 
+                     benchmarking open-source datasets by creating a low name bias dataset. We further create an 
+                     open-source repository for  embedding-based EA methods and present the analysis for invoking 
+                     further research motivations in the field of EA.
+                </p>
+                <header>
+                    <h1>Images</h1>
+                </header>
+                <section>
+                <a class="image featured"><img src="../assets/img/EAsurvey_result.png" alt="" /></a>
+                <p style = "text-align:center;"><b><u>
+                    Results of EA methods in terms of Hits@1, Hits@5 and MRR</b></u>
+                </p>
+                </section>
+            </section>
+            <section>
+                <header>
+                    <h1>Links</h1>
+                </header>
+                <p>
+                    <a href = "https://arxiv.org/abs/2205.08777" target="_blank" class="button alt">Paper</a>
+                </p>
+            </section>
+        </article>
+
+	</body>
+</html>

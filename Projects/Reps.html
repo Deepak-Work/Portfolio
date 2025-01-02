@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* Ensure consistent font */
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+
+            .box {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            header h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #2d2d2d;
+            }
+
+            header p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+
+            section header h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            section p {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+
+            /* Links and buttons */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 5px;
+                background: #007BFF;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+
+            .button:hover {
+                background: #0056b3;
+            }
+
+            .button.alt {
+                background: #28a745;
+            }
+
+            .button.alt:hover {
+                background: #218838;
+            }
+
+            .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+
+            /* Responsive Design */
+            @media screen and (max-width: 768px) {
+                .box {
+                    padding: 15px;
+                    margin: 20px;
+                }
+
+                header h2 {
+                    font-size: 1.8rem;
+                }
+
+                section header h1 {
+                    font-size: 1.4rem;
+                }
+
+                section p {
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+	</head>
+	<body>
+        <article class="box">
+            <header>
+                <h2>REPS</h2>
+                <p>Relation, Position and Structure aware Entity Alignment</p>
+            </header>
+            <section>
+                <header>
+                    <h1>Abstract</h1>
+                </header>
+                <p>
+                    Entity Alignment (EA) is the task of recognizing the same entity
+                    present in different knowledge bases. Recently, embedding-based
+                    EA techniques have established dominance where alignment is
+                    done based on closeness in latent space. Graph Neural Networks
+                    (GNN) gained popularity as the embedding module due to its ability
+                    to learn entities’ representation based on their local sub-graph structures. Although GNN shows promising results, limited works have
+                    aimed to capture relations while considering their global importance and entities’ relative position during EA. This paper presents
+                    Relation, Position and Structure aware Entity Alignment (RePS),
+                    a multi-faceted representation learning-based EA method that encodes local, global, and relation information for aligning entities.
+                    To capture relations and neighborhood structure, we propose a
+                    relation-based aggregation technique – Graph Relation Network
+                    (GRN) that incorporates relation importance during aggregation.
+                    To capture the position of an entity, we propose Relation-aware
+                    Position Aggregator (RPA) to capitalize entities’ position in a nonEuclidean space using training labels as anchors, which provides a
+                    global view of entities. Finally, we introduce a Knowledge Aware
+                    Negative Sampling (KANS) that generates harder to distinguish
+                    negative samples for the model to learn optimal representations. We
+                    perform exhaustive experimentation on four cross-lingual datasets
+                    and report an ablation study to demonstrate the effectiveness of
+                    GRN, KANS, and position encodings.
+                </p>
+                <header>
+                    <h1>Images</h1>
+                </header>
+                <section>
+                <a class="image featured"><img src="../assets/img/RePS_desc.png" alt="" /></a>
+                <p style = "text-align:center;"><b><u>
+                    Method showing the different information encoded to learn the representation of an entity for EA</b></u>
+                </p>
+                </section>
+                <hr>
+                <section>
+                <a class="image featured"><img src="../assets/img/REPS_architecture.png" alt="" /></a>
+                <p style = "text-align:center;"><b><u>
+                    Architecture of RePS showing the different information encoded to learn the representation of an entity for EA</b></u>
+                </p>
+                </section>
+            </section>
+            <section>
+                <header>
+                    <h1>Links</h1>
+                </header>
+                <p>
+                    <a href = "https://dl.acm.org/doi/abs/10.1145/3487553.3524720" target="_blank" class="button alt">Paper</a>
+                </p>
+            </section>
+        </article>
+
+	</body>
+</html>

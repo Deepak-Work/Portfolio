@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif; /* Ensure consistent font */
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+    
+            .box {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            header h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #2d2d2d;
+            }
+    
+            header p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+    
+            section header h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+    
+            section p {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+    
+            /* Links and buttons */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 5px;
+                background: #007BFF;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+    
+            .button:hover {
+                background: #0056b3;
+            }
+    
+            .button.alt {
+                background: #28a745;
+            }
+    
+            .button.alt:hover {
+                background: #218838;
+            }
+
+            .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+    
+            /* Responsive Design */
+            @media screen and (max-width: 768px) {
+                .box {
+                    padding: 15px;
+                    margin: 20px;
+                }
+    
+                header h2 {
+                    font-size: 1.8rem;
+                }
+    
+                section header h1 {
+                    font-size: 1.4rem;
+                }
+    
+                section p {
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+	</head>
+	<body>
+        <article class="box">
+            <header>
+                <h2>Intent2Vec</h2>
+                <p>Representation learning of cardholder and merchant intent from temporal interaction sequences for Fraud detection</p>
+            </header>
+            <section>
+                <header>
+                    <h1>Abstract</h1>
+                </header>
+                <p>
+                    Fraud detection has been a challenging problem for
+                    financial institutions as it causes a loss of $24.2
+                    billion per annum globally. This paper focuses
+                    on transaction fraud, the most prevalent type of
+                    fraud in the payment industry. The ability to detect and decline potential fraudulent transactions in
+                    real-time is crucial to guarantee a robust and secure
+                    environment for both, cardholders and merchants.
+                    Conventional fraud detection techniques predominantly use rule-based methods or extensive manual
+                    feature engineering for machine learning models.
+                    These fraud models rely on detecting anomalies in
+                    the attributes of a transaction. However, they fail to
+                    capture any type of interaction between cardholder
+                    and merchant involved in a transaction. The proposed approach, Intent2Vec, extends the capability
+                    of traditional fraud models by learning representation of payment entities using approaches of NLP
+                    to semantically capture the intent of doing a transaction. The modelled intent enables us to predict
+                    the next set of plausible merchants for a card and
+                    vice versa. Any deviation from the predicted and
+                    observed card or merchant can point towards a potential fraud. We test the relevance of intent based
+                    semantics on the downstream task of fraud detection wherein classifiers utilizing the entities’ learnt
+                    intent outperform other baseline algorithms on metrics such as AUC-PR and F1 score.
+                </p>
+                <header>
+                    <h1>Images</h1>
+                </header>
+                <section>
+                <a class="image featured"><img src="../assets/img/i2v_architecture.png" alt="" /></a>
+                <p style = "text-align:center;"><b><u>
+                    Card and Merchant embedding is passed through an
+                    autoencoder along with transaction features. Encoder layer is used
+                    as a feature vector for downstream fraud classification task</b></u>
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h1>Links</h1>
+                </header>
+                <p>
+                    <a href = "https://www.semanticscholar.org/paper/Intent2Vec%3A-Representation-learning-of-cardholder-Kumar-Shaju/4c06f9af0d3c360e994111220424e877302e5d54" target="_blank" class="button alt">Paper</a>
+                </p>
+            </section>
+        </article>
+
+	</body>
+</html>
