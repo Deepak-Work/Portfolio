@@ -1,410 +1,210 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Work</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	
-	<body>
-		<div class="page-wrap" id="root">
-			
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="header__inner">
-					<div class="header__logo"><a href="index.html"><img src="assets/img/home_icon.svg" alt="" style="width: 45px;"/></a></div>
-					<div class="navbar-toggle" id="fs-button">
-						<div class="navbar-icon"><span></span></div>
+<head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+    <!-- Vendors-->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
+    <!-- App & fonts-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css">
+    <style>
+        #main {
+            display: flex;
+            gap: 20px;
+        }
+        #main .col-4 {
+            flex: 1;
+        }
+        #main .col-8 {
+            flex: 2;
+        }
+
+        .undivided {
+            list-style-type: none;
+            padding: 0;
+        }
+        .undivided li {
+            margin-bottom: 10px;
+			padding-left: 80px;
+			padding-right: 50px;
+        }
+		h1 {
+			font-size: 2.5em;
+			padding-left: 70px;
+			padding-right: 40px;
+		}
+		h2 {
+			font-size: 2.5em;
+			padding-right: 40px;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap" id="root">
+        <!-- header -->
+        <header class="header header--fixed">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="assets/img/home_icon.svg" alt="" style="width: 45px;" />
+                    </a>
+                </div>
+                <div class="navbar-toggle" id="fs-button">
+                    <div class="navbar-icon"><span></span></div>
+                </div>
+            </div>
+
+            <!-- fullscreenmenu__module -->
+            <div class="fullscreenmenu__module" trigger="#fs-button">
+                <!-- overlay-menu -->
+                <nav class="overlay-menu">
+                    <ul class="wil-menu-list">
+                        <li class="current-menu-item"><a href="about.html">Bio</a></li>
+                        <li><a href="work.html">Projects</a></li>
+                        <li><a href="blog.html">Everything Else</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Content-->
+        <div class="wil-content">
+            <!-- Section -->
+            <section class="awe-section">
+                <div class="container">
+                    <div class="page-title pb-40">
+                        <h2 class="page-title__title">Let's see what I did</h2>
+                        <p class="page-title__text">
+                            List of projects I've contributed to over time. Select the one of your interest to find
+                            more details. Trying my best to keep this up to date!
+                        </p>
+                        <div class="page-title__divider"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="main">
+                <div class="col-4">
+                    <section class="box">
+                        <h1>Personal Projects</h1>
+                        <ul class="undivided">
+                            <li><a href="#" onclick="showContent('VideoTranslation')">Video Translation using AI</a></li>
+                            <li><a href="#" onclick="showContent('SportsAnalytics')">Sport Analytics over Distributed Computing</a></li>
+                            <li><a href="#" onclick="showContent('IR')">Information Retrieval using NLP</a></li>
+                            <li><a href="#" onclick="showContent('DenseNet')">Orthogonal Low Rank Embeddings for Image Classification</a></li>
+                        </ul>
+                        <h1>Research Publications</h1>
+                        <ul class="undivided">
+                            <li><a href="#" onclick="showContent('GNNBias')">Bias in Graph Neural Networks</a></li>
+                            <li><a href="#" onclick="showContent('REPS')">REPS</a></li>
+                            <li><a href="#" onclick="showContent('EASurvey')">Entity Alignment Survey</a></li>
+                            <li><a href="#" onclick="showContent('Intent2Vec')">Intent2Vec</a></li>
+                            <li><a href="#" onclick="showContent('MedML')">MedML</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-8" id="content">
+                    <article class="box post">
+                        <header>
+                            <h2>In more detail...</h2>
+                            <p>Select any project from the navigation to begin</p>
+                        </header>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-6 ">
+						<p class="footer__coppy">All rights Reserved.</p>
+					</div>
+					<div class="col-md-6 col-lg-6 ">
+						<div class="footer__social">
+							
+							<!-- social-icon -->
+							<a class="social-icon" href="https://www.linkedin.com/in/dc1998/"><i class="social-icon__icon fa fa-linkedin"></i>
+							</a><!-- End / social-icon -->
+							
+							<!-- social-icon -->
+							<a class="social-icon" href="https://github.com/Deepak-Work"><i class="social-icon__icon fa fa-github"></i>
+							</a><!-- End / social-icon -->
+							
+							<!-- social-icon -->
+							<a class="social-icon" href="https://scholar.google.com/citations?user=gYnMtGkAAAAJ&hl=en"><i class="social-icon__icon"><img src="assets/img/google-scholar.svg" width = "13px" height = "13px"></i>
+							</a><!-- End / social-icon -->
+							
+							
+							
+							<!-- social-icon -->
+							<a class="social-icon" href="https://www.instagram.com/lord._.dc/"><i class="social-icon__icon fa fa-instagram"></i>
+							</a><!-- End / social-icon -->
+							
+							
+							
+						</div>
 					</div>
 				</div>
-				
-				<!-- fullscreenmenu__module -->
-				<div class="fullscreenmenu__module" trigger="#fs-button">
-					
-					<!-- overlay-menu -->
-					<nav class="overlay-menu">
-						
-						<!--  -->
-						<ul class="wil-menu-list">
-							<li class="current-menu-item"><a href="about.html">Bio</a>
-							</li>
-							<li><a href="work.html">Projects</a>
-							</li>
-							<li><a href="blog.html">Everything Else</a>
-							</li>
-							<li><a href="contact.html">Contact</a>
-							</li>
-						</ul><!--  -->
-						
-					</nav><!-- End / overlay-menu -->
-					
-				</div><!-- End / fullscreenmenu__module -->
-				
-			</header><!-- End / header -->
-
-
-			<!-- Content-->
-			<div class="wil-content">
-				
-				<!-- Section -->
-				<section class="awe-section">
-					<div class="container">
-						
-						<!-- page-title -->
-						<div class="page-title pb-40">
-							<h2 class="page-title__title">Let's see what I did</h2>
-							<p class="page-title__text">List of projects I've contributed to over time. Select the one of your interest to find more details. Trying my best to keep this up to date! </p>
-							<div class="page-title__divider"></div>
-						</div><!-- End / page-title -->
-						
-					</div>
-				</section>
-				<!-- End / Section -->
-
-				<section id="main">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-medium">
-	
-								<!-- Sidebar -->
-									<section class="box">
-										<h1>Personal Projects</h1>
-										<ul class="undivided">
-											<li><a href="#" onclick="showContent('VideoTranslation')">Video Translation using AI</a></li>
-											<li><a href="#" onclick="showContent('SportsAnalytics')">Sport Analytics over Distributed Computing</a></li>
-											<li><a href="#" onclick="showContent('IR')">Information Retrieval using NLP</a></li>
-											<li><a href="#" onclick="showContent('DenseNet')">Orthogonal Low Rank Embeddings for Image Classification</a></li>
-											
-										</ul>
-										<h1>Research Publications</h1>
-										<ul class="undivided">
-											<li><a href="#" onclick="showContent('GNNBias')">Bias in Graph Neural Networks</a></li>
-											<li><a href="#" onclick="showContent('REPS')">REPS</a></li>
-											<li><a href="#" onclick="showContent('EASurvey')">Entity Alignment Survey</a></li>
-											<li><a href="#" onclick="showContent('Intent2Vec')">Intent2Vec</a></li>
-											<li><a href="#" onclick="showContent('MedML')">MedML</a></li>
-											</ul>
-									</section>
-	
-							</div>
-							<div class="col-8 col-12-medium imp-medium" id = "content">
-								<!-- Content -->
-									<article class="box post">
-										<header>
-											<h2>In more detail...</h2>
-											<p>Select any project from the navigation to begin</p>
-										</header>
-									</article>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				
-				<!-- Section -->
-				<section class="awe-section bg-gray">
-					<div class="container">
-						<div class="grid-css grid-css--masonry" data-col-lg="3" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
-							<div class="grid__inner">
-								<div class="grid-sizer"></div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-slide-top -->
-													<div class="hoverbox ef-slide-top light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/807034/pexels-photo-807034.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">The Essential Guide to UX for AR</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-slide-top -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-move-top -->
-													<div class="hoverbox ef-move-top light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/609687/pexels-photo-609687.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">3 Essential Design Trends</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-move-top -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-push-bottom -->
-													<div class="hoverbox ef-push-bottom light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/754949/pexels-photo-754949.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">How to Create and Manage SVG Sprites</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-push-bottom -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-slide-left -->
-													<div class="hoverbox ef-slide-left light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/794578/pexels-photo-794578.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">How to Master Microcopy</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-slide-left -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-zoom-in -->
-													<div class="hoverbox ef-zoom-in light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/159333/pexels-photo-159333.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">7 UI Choices That Damage UX</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-zoom-in -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-slide-top -->
-													<div class="hoverbox ef-slide-top light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">3 Essential Design Trends</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-slide-top -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-push-top -->
-													<div class="hoverbox ef-push-top light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/792906/pexels-photo-792906.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">The Myth of Ugly Design</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-push-top -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- work -->
-											<div class="work"><a href="work-detail.html">
-													
-													<!-- hoverbox ef-push-bottom -->
-													<div class="hoverbox ef-push-bottom light">
-														
-														<!-- hb_front -->
-														<div class="hb_front"><img src="https://images.pexels.com/photos/789140/pexels-photo-789140.jpeg?h=350&amp;auto=compress&amp;cs=tinysrgb" alt=""/>
-														</div><!-- End / hb_front -->
-														
-														
-														<!-- hb_back -->
-														<div class="hb_back">
-															<h2 class="work__title">Free PSD Files</h2><span class="work__text">View detail</span>
-														</div><!-- End / hb_back -->
-														
-													</div><!-- End / hoverbox ef-push-bottom -->
-													</a>
-											</div><!-- End / work -->
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="awe-text-center mt-50">
-							<a class="md-btn md-btn--outline-primary " href="#">more work
-							</a>
-						</div>
-					</div>
-				</section>
-				<!-- End / Section -->
-				
 			</div>
-			<!-- End / Content-->
-			
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-6 ">
-							<p class="footer__coppy">2018 &copy; Copyright <a href="http://awe7.com/">Awe7</a>. All rights Reserved.</p>
-						</div>
-						<div class="col-md-6 col-lg-6 ">
-							<div class="footer__social">
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-facebook"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-twitter"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-linkedin"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-behance"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-vimeo"></i>
-								</a><!-- End / social-icon -->
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- End / footer -->
-			
 		</div>
-		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-		<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
-		<script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
-		<!-- App-->
-		<script type="text/javascript" src="assets/js/main.js"></script>
-	</body>
+
+        <!-- Vendors-->
+        <script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+        <script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
+        <script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
+        <script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+        <script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
+        <script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script>
+            function showContent(project) {
+				const contentElement = document.getElementById("content");
+				const mainSection = document.getElementById("main");
+
+				const projects = {
+					VideoTranslation: '<object type="text/html" data="Projects/VideoTranslation.html" style="width:100%; height:100%" ></object>',
+					SportsAnalytics: '<object type="text/html" data="Projects/SportsAnalytics.html" style="width:100%; height:100%" ></object>',
+					IR: '<object type="text/html" data="Projects/InformationRetrieval.html" style="width:100%; height:100%" ></object>',
+					DenseNet: '<object type="text/html" data="Projects/OrthoLowRank.html" style="width:100%; height:100%" ></object>',
+					GNNBias: '<object type="text/html" data="Projects/BiasGNN.html" style="width:100%; height:100%" ></object>',
+					REPS: '<object type="text/html" data="Projects/Reps.html" style="width:100%; height:100%" ></object>',
+					EASurvey: '<object type="text/html" data="Projects/EASurvey.html" style="width:100%; height:100%" ></object>',
+					Intent2Vec: '<object type="text/html" data="Projects/Intent2vec.html" style="width:100%; height:100%" ></object>',
+					MedML: '<object type="text/html" data="Projects/MedML.html" style="width:100%; height:100%" ></object>'
+				};
+
+				contentElement.innerHTML = projects[project] || "<h2>Details not found</h2><p>Sorry, no details are available for this project.</p>";
+
+				const isMainAtTop = window.scrollY === 0;
+
+				setTimeout(() => {
+					mainSection.scrollIntoView({
+						behavior: isMainAtTop ? "smooth" : "instant",
+						block: "start"
+					});
+				}, 0);
+			}
+
+        </script>
+    </div>
+</body>
 </html>
