@@ -99,15 +99,15 @@
                     <section class="box">
                         <h1>Personal Projects</h1>
                         <ul class="undivided">
-                            <li><a href="#" onclick="showContent('VideoTranslation')">Video Translation using AI</a></li>
-                            <li><a href="#" onclick="showContent('SportsAnalytics')">Sport Analytics over Distributed Computing</a></li>
-                            <li><a href="#" onclick="showContent('IR')">Information Retrieval using NLP</a></li>
-                            <li><a href="#" onclick="showContent('DenseNet')">Orthogonal Low Rank Embeddings for Image Classification</a></li>
+                            <li><a href="#" onclick="showContent('VideoTranslation')" id = "VT">Video Translation using AI</a></li>
+                            <li><a href="#" onclick="showContent('SportsAnalytics')" id = "Sports">Sport Analytics over Distributed Computing</a></li>
+                            <li><a href="#" onclick="showContent('IR')" id = "IR">Information Retrieval using NLP</a></li>
+                            <li><a href="#" onclick="showContent('DenseNet')" id = "OLE">Orthogonal Low Rank Embeddings for Image Classification</a></li>
                         </ul>
                         <h1>Research Publications</h1>
                         <ul class="undivided">
-                            <li><a href="#" onclick="showContent('GNNBias')">Bias in Graph Neural Networks</a></li>
-                            <li><a href="#" onclick="showContent('REPS')">REPS</a></li>
+                            <li><a href="#" onclick="showContent('GNNBias')" id = "GNNBias">Bias in Graph Neural Networks</a></li>
+                            <li><a href="#" onclick="showContent('REPS')" id = "REPS">REPS</a></li>
                             <li><a href="#" onclick="showContent('EASurvey')">Entity Alignment Survey</a></li>
                             <li><a href="#" onclick="showContent('Intent2Vec')">Intent2Vec</a></li>
                             <li><a href="#" onclick="showContent('MedML')">MedML</a></li>
@@ -176,13 +176,31 @@
         <script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script>
+            window.onload = function() {
+                // Check if the section is in the URL hash or localStorage
+                const validHashes = ["#VT","#IR","#OLE","#Sports","#GNNBias","#REPS"];
+
+                if (validHashes.includes(window.location.hash)) {
+                    // Get the section ID from localStorage if set
+                    const sectionId = localStorage.getItem("triggerSection");
+                    if (sectionId) {
+                        // Call the showContent function and trigger the desired behavior
+                        showContent(sectionId);
+                        
+                        // Optionally, clear localStorage after use
+                        localStorage.removeItem("triggerSection");
+                    }
+                }
+            };
+
+
             function showContent(project) {
 				const contentElement = document.getElementById("content");
 				const mainSection = document.getElementById("main");
 
 				const projects = {
 					VideoTranslation: '<object type="text/html" data="Projects/VideoTranslation.html" style="width:100%; height:100%" ></object>',
-					SportsAnalytics: '<object type="text/html" data="Projects/SportsAnalytics.html" style="width:100%; height:100%" ></object>',
+					SportsAnalytics: '<object type="text/html" data="Projects/SportsAnalytics.html" style="width:100%; height:100%"></object>',
 					IR: '<object type="text/html" data="Projects/InformationRetrieval.html" style="width:100%; height:100%" ></object>',
 					DenseNet: '<object type="text/html" data="Projects/OrthoLowRank.html" style="width:100%; height:100%" ></object>',
 					GNNBias: '<object type="text/html" data="Projects/BiasGNN.html" style="width:100%; height:100%" ></object>',
