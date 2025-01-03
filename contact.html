@@ -16,7 +16,7 @@
 		<!-- App & fonts-->
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
 		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css">
-		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 			<!-- <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> -->
 
 		<style>
@@ -78,7 +78,7 @@
 						<ul class="wil-menu-list">
 							<li class="current-menu-item"><a href="about.html">Bio</a></li>
 							<li><a href="work.html">Projects</a></li>
-							<li><a href="blog.html">Everything Else</a></li>
+							<li><a href="work-detail.html">Everything Else</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 						
@@ -98,7 +98,7 @@
 						<!-- page-title -->
 						<div class="page-title pb-40">
 							<h2 class="page-title__title">Get in touch</h2>
-							<p class="page-title__text"></p>
+							<p class="page-title__text">Got questions, ideas, or just want to say hi? I’d love to hear from you! <br> Whether it’s about a project, collaboration, or just a friendly chat, don’t hesitate to drop a message!</p>
 							<div class="page-title__divider"></div>
 						</div><!-- End / page-title -->
 						
@@ -124,7 +124,7 @@
 								<!-- contact -->
 								<div class="contact">
 									<div class="contact__icon"><i class="pe-7s-back"></i></div>
-									<h3 class="contact__title">call us</h3>
+									<h3 class="contact__title">contact</h3>
 									<div class="contact__text">+1-929-628-4569</div>
 								</div><!-- End / contact -->
 								
@@ -142,31 +142,31 @@
 									
 									<!-- form-item -->
 									<div class="form-item form-item--half">
-										<input class="form-control" type="text" name="input" placeholder="Your name"/>
+										<input class="form-control" id = "name" type="text" name="input" placeholder="Your name"/>
 									</div><!-- End / form-item -->
 									
 									
 									<!-- form-item -->
 									<div class="form-item form-item--half">
-										<input class="form-control" type="text" name="input" placeholder="Your emai"/>
+										<input class="form-control" id = "email" type="text" name="input" placeholder="Your emai"/>
 									</div><!-- End / form-item -->
 									
 									
 									<!-- form-item -->
 									<div class="form-item">
-										<input class="form-control" type="text" name="input" placeholder="Subject"/>
+										<input class="form-control" id = "subject" type="text" name="input" placeholder="Subject"/>
 									</div><!-- End / form-item -->
 									
 									
 									<!-- form-item -->
 									<div class="form-item">
-										<textarea class="form-control" placeholder="Your message" style="min-height:200px;"></textarea>
+										<textarea class="form-control" id = "message" placeholder="Your message" style="min-height:200px;"></textarea>
 									</div><!-- End / form-item -->
 									
 									
 									<!-- form-item -->
 									<div class="form-item">
-										<a class="md-btn md-btn--primary md-btn--lg " href="#">Send message
+										<a class="md-btn md-btn--primary md-btn--lg " id = "sendButton" href="#">Send message
 										</a>
 									</div><!-- End / form-item -->
 									
@@ -232,5 +232,41 @@
 		<script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
 		<!-- App-->
 		<script type="text/javascript" src="assets/js/main.js"></script>
+
+		<script type="text/javascript">
+			(function() {
+				emailjs.init("gf4lbilwI4zrH8f4W"); // Replace with your EmailJS user ID
+			})();
+		
+			document.getElementById("sendButton").addEventListener("click", function () {
+				// Fetch values from the form fields
+				const name = document.getElementById("name").value;
+				const email = document.getElementById("email").value;
+				const subject = document.getElementById("subject").value;
+				const message = document.getElementById("message").value;
+
+				// Check if all fields are filled
+				if (!name || !email || !subject || !message) {
+					alert("Please fill in all fields.");
+					return;
+				}
+
+				// Send the email using EmailJS
+				emailjs.send("service_ljp4fqn", "template_qbksxx5", {
+					from_name: name,
+					from_email: email,
+					subject: subject,
+					message: message
+				})
+				.then((response) => {
+					alert("Email sent successfully!");
+					console.log("Success:", response.status, response.text);
+				})
+				.catch((error) => {
+					alert("Error sending email. Please try again.");
+					console.error("Error:", error);
+				});
+			});
+		</script>
 	</body>
 </html>
