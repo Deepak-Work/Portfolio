@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Ensure consistent font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .box {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2d2d2d;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        section header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Links and buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .button.alt {
+            background: #28a745;
+        }
+
+        .button.alt:hover {
+            background: #218838;
+        }
+
+        .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .box {
+                padding: 15px;
+                margin: 20px;
+            }
+
+            header h2 {
+                font-size: 1.8rem;
+            }
+
+            section header h1 {
+                font-size: 1.4rem;
+            }
+
+            section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="box">
+        <header>
+            <h2>Minting NFTs</h2>
+            <p>Deploying unique NFT collection on the Ethereum blockchain.</p>
+        </header>
+        <section>
+            <header>
+                <h1>Summary</h1>
+            </header>
+            <p>
+                In this project, I developed and deployed my own NFT collection on the Ethereum blockchain, following a 
+                comprehensive process. I began by uploading NFT images to IPFS using services like Pinata or NFT Storage, 
+                then created metadata files in JSON format with links to the IPFS-stored images. The core of the project 
+                involved developing a Solidity smart contract using OpenZeppelin's ERC721 standard, which I customized with 
+                features like a token ID counter, maximum supply limit, and a base URI for metadata. I implemented a custom 
+                tokenURI function and added a secure withdraw function with access control.
+                I compiled, tested, and deployed the contract to an Ethereum testnet (Sepolia), then verified it on Etherscan. 
+                Futher, I minted NFTs using the deployed contract's functions and verified their appearance on OpenSea Testnets. 
+                Key technical aspects included working with IPFS, implementing ERC721 standards, using Remix IDE for development 
+                and deployment, and integrating with OpenSea for NFT visualization and trading. NFT is deployed on a testnet, please
+                do not make any offers to buy it :D
+            </p>
+        </section>
+        <section>
+            <header>
+                <h1>Links</h1>
+            </header>
+            <p>
+                <a href="https://sepolia.etherscan.io/address/0x82753986cbcc5876b05fbd22a9b125434dfd4181" target="_blank" class="button alt">Contract</a>
+                <a href="https://testnets.opensea.io/assets/sepolia/0x82753986cbcc5876b05fbd22a9b125434dfd4181/0" target="_blank" class="button alt">NFT</a>
+            </p>
+        </section>
+    </article>
+</body>
+</html>

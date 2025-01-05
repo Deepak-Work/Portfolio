@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Ensure consistent font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .box {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2d2d2d;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        section header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Links and buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .button.alt {
+            background: #28a745;
+        }
+
+        .button.alt:hover {
+            background: #218838;
+        }
+
+        .image.featured img {
+                max-width: 100%; /* Limits the width to the container's width */
+                height: auto;    /* Maintains the aspect ratio */
+                display: block;  /* Ensures the image does not add extra space below it */
+                margin: 0 auto;  /* Centers the image within the container */
+            }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .box {
+                padding: 15px;
+                margin: 20px;
+            }
+
+            header h2 {
+                font-size: 1.8rem;
+            }
+
+            section header h1 {
+                font-size: 1.4rem;
+            }
+
+            section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="box">
+        <header>
+            <h2>Omnicode - A Cloud-Based Coding Assistant</h2>
+            <p>Revolutionize your coding experience with Omnicode: Your AI-powered, cloud-based coding assistant that scales effortlessly.</p>
+        </header>
+        <section>
+            <header>
+                <h1>Summary</h1>
+            </header>
+            <p>
+                Omnicode is a cutting-edge cloud-based coding assistant designed to enhance developer productivity and 
+                streamline the coding process. Leveraging the power of Amazon Web Services (AWS) and state-of-the-art AI 
+                technology, Omnicode offers three primary features: intelligent code completion, automated code refactoring, 
+                and instant documentation generation. The system architecture is built on a robust foundation of AWS services, 
+                including Cognito for seamless authentication, API Gateway for efficient request handling, Lambda for 
+                serverless computing, and SageMaker for hosting the advanced Meta CodeLlama 70B language model. Omnicode's 
+                scalable design allows it to handle a large number of concurrent users while maintaining high performance. 
+                The assistant also provides a personalized analytics dashboard, giving users insights into their coding 
+                patterns and AI usage. Implemented as a VSCode extension, Omnicode offers a user-friendly interface that 
+                integrates smoothly into developers' existing workflows, making it an indispensable tool for both novice and 
+                experienced programmers alike.
+            </p>
+        </section>
+        <section>
+            <header>
+                <h1>Links</h1>
+            </header>
+            <p>
+                <a href="https://github.com/zayaanra/omnicode" target="_blank" class="button alt">Code</a>
+                <a href="https://drive.google.com/file/d/1WDPieUghLicKQu5yM1M9_y8tB1IIGYyN/view?usp=sharing" target="_blank" class="button alt">Paper</a>
+                <a href="https://drive.google.com/file/d/1J3uRvLLb_clW60OAlIQX9ji49iZOwt86/view?usp=sharing" target="_blank" class="button alt">Presentation</a>
+
+
+            </p>
+        </section>
+    </article>
+</body>
+</html>
