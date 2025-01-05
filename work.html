@@ -99,6 +99,11 @@
                     <section class="box">
                         <h1>Personal Projects</h1>
                         <ul class="undivided">
+                            <li><a href="#" onclick="showContent('Omnicode')" id = "Omni">LLM-powered VSCode coding assistant extension</a></li>
+                            <li><a href="#" onclick="showContent('NFT')" id = "NFT">Minting NFTs</a></li>
+                            <li><a href="#" onclick="showContent('CampusConnect')" id = "CC">Full-Stack University Communication Hub</a></li>
+                            <li><a href="#" onclick="showContent('SovereignDefault')" id = "SD">Analyis of Sovereign Default</a></li>
+                            <li><a href="#" onclick="showContent('StyleTransfer')" id = "AI4G">Style Transfer in Games</a></li>
                             <li><a href="#" onclick="showContent('VideoTranslation')" id = "VT">Video Translation using AI</a></li>
                             <li><a href="#" onclick="showContent('SportsAnalytics')" id = "Sports">Sport Analytics over Distributed Computing</a></li>
                             <li><a href="#" onclick="showContent('IR')" id = "IR">Information Retrieval using NLP</a></li>
@@ -178,7 +183,7 @@
         <script>
             window.onload = function() {
                 // Check if the section is in the URL hash or localStorage
-                const validHashes = ["#VT","#IR","#OLE","#Sports","#GNNBias","#REPS"];
+                const validHashes = ["#VT","#IR","#OLE","#Sports","#GNNBias","#REPS", "#AI4G", "#SD","#CC","#NFT","#Omni",];
 
                 if (validHashes.includes(window.location.hash)) {
                     // Get the section ID from localStorage if set
@@ -199,6 +204,11 @@
 				const mainSection = document.getElementById("main");
 
 				const projects = {
+                    Omnicode: '<object type="text/html" data="Projects/Omnicode.html" style="width:100%; height:100%" ></object>',
+                    NFT: '<object type="text/html" data="Projects/NFT.html" style="width:100%; height:100%" ></object>',
+                    CampusConnect: '<object type="text/html" data="Projects/StyleTransfer.html" style="width:100%; height:100%" ></object>',
+                    SovereignDefault: '<object type="text/html" data="Projects/SovereignDefault.html" style="width:100%; height:100%" ></object>',
+                    StyleTransfer: '<object type="text/html" data="Projects/StyleTransfer.html" style="width:100%; height:100%" ></object>',
 					VideoTranslation: '<object type="text/html" data="Projects/VideoTranslation.html" style="width:100%; height:100%" ></object>',
 					SportsAnalytics: '<object type="text/html" data="Projects/SportsAnalytics.html" style="width:100%; height:100%"></object>',
 					IR: '<object type="text/html" data="Projects/InformationRetrieval.html" style="width:100%; height:100%" ></object>',
